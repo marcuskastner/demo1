@@ -1,0 +1,41 @@
+#animation-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#text-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  opacity: 0.75;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+svg {
+  padding: 16px;
+}
+svg path {
+  fill: transparent;
+  stroke: #000;
+  stroke-width: 2;
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: textAnimation 3.5s ease-in-out 1 forwards;
+}
+
+@keyframes textAnimation {
+  0% {
+    stroke-dashoffset: 700;
+  }
+  80% {
+    fill: transparent;
+  }
+  100% {
+    fill: #000;
+    stroke-dashoffset: 0;
+  }
+}
